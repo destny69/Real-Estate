@@ -188,3 +188,28 @@ If you have a `.env` file in your project directory, the Makefile will automatic
 
 
 
+# Black Configuration for Python Project
+
+This document provides an overview of the Black configuration specified in the `pyproject.toml` file for the Real Estate Project.
+
+## Configuration
+
+The `[tool.black]` section in the `pyproject.toml` file specifies the configuration options for the Black code formatter.
+
+### `extend-exclude`
+
+The `extend-exclude` option extends the default exclusion list used by Black to skip formatting of certain directories or files. It accepts a multiline string with regular expressions defining paths to exclude from formatting.
+
+In this project, the following directories are excluded from Black formatting:
+
+- `env`: Excludes the `env` directory, typically used for virtual environments.
+
+The exclusion list ensures that Black does not attempt to format files or directories that should not be modified, such as third-party libraries or virtual environment files.
+
+```toml
+[tool.black]
+extend-exclude = '''
+/(
+    | env
+)/
+'''
