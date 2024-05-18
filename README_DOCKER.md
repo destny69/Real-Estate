@@ -145,7 +145,7 @@ volumes:
     static_volume:
     media_volume:
 
-
+```
 # Makefile Usage and Commands
 
 This Makefile provides convenience commands for managing the Real Estate Project using Docker and Docker Compose.
