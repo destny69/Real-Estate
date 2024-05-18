@@ -101,4 +101,46 @@ Ensure you have Docker and Docker Compose installed on your system. You can down
 The Docker Compose configuration includes the following sections:
 
 ```yaml
-# Paste your docker-compose.yml content here
+
+version: '3.8'
+
+services:
+    api:
+        build:
+            context: .
+            dockerfile: ./docker/local/django/Dockerfile
+        command: /start
+        volumes:
+            - .:/app
+            - static_volume:/app/staticfiles
+            - media_volume:/app/mediafiles
+        ports:  # Use ports instead of expose
+            - "8000:8000"
+        env_file:
+            - .env
+        depends_on:
+            - postgres-db
+        networks:
+            - estate-react
+
+    postgres-db:
+        image: postgres:12.0-alpine
+        ports:
+            - "5432:5432"
+        volumes:
+            - postgres_data:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_DB=${POSTGRES_DB}
+        networks:
+            - estate-react
+
+networks:
+    estate-react:
+        driver: bridge
+
+volumes:
+    postgres_data:
+    static_volume:
+    media_volume:
