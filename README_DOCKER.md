@@ -75,7 +75,7 @@ The `start` script is used to run the Django development server. Like the `entry
 
 
 
-# DOCKER-COMPOSE DOCUMENTATION 
+
 
 # Docker Compose Configuration for Real Estate Project
 
@@ -144,3 +144,47 @@ volumes:
     postgres_data:
     static_volume:
     media_volume:
+
+
+# Makefile Usage and Commands
+
+This Makefile provides convenience commands for managing the Real Estate Project using Docker and Docker Compose.
+
+## Prerequisites
+
+Ensure you have Docker and Docker Compose installed on your system. You can download Docker Desktop, which includes Docker Compose, from [here](https://www.docker.com/products/docker-desktop).
+
+## Configuration
+
+The Makefile checks for the presence of a `.env` file and includes it if found. It then exports the variables defined in the `.env` file.
+
+### Environment Variables
+
+If you have a `.env` file in your project directory, the Makefile will automatically load and export its variables to be used by Docker Compose.
+
+## Commands
+
+- `build`: Builds the Docker containers, ensuring they are up-to-date. Usage: `make build`
+- `up`: Starts the Docker containers in detached mode. Usage: `make up`
+- `down`: Stops and removes the Docker containers. Usage: `make down`
+- `show-logs`: Displays the logs of the Docker containers. Usage: `make show-logs`
+- `migrate`: Runs Django database migrations. Usage: `make migrate`
+- `makemigrations`: Creates Django migration files. Usage: `make makemigrations`
+- `superuser`: Creates a superuser for Django admin. Usage: `make superuser`
+- `collectstatic`: Collects static files into one location. Usage: `make collectstatic`
+- `down-v`: Stops and removes Docker containers and volumes. Usage: `make down-v`
+- `volume`: Inspects the volume used by PostgreSQL. Usage: `make volume`
+- `estate-db`: Accesses the PostgreSQL database shell. Usage: `make estate-db`
+- `test`: Runs tests using pytest with coverage. Usage: `make test`
+- `test-html`: Runs tests and generates HTML coverage report. Usage: `make test-html`
+- `flake8`: Checks Python files for PEP 8 compliance using flake8. Usage: `make flake8`
+- `black-check`: Checks Python files for formatting issues using Black. Usage: `make black-check`
+- `black-diff`: Shows the diff of formatting changes using Black. Usage: `make black-diff`
+- `black`: Formats Python files using Black. Usage: `make black`
+- `isort-check`: Checks Python files for import sorting using isort. Usage: `make isort-check`
+- `isort-diff`: Shows the diff of import sorting changes using isort. Usage: `make isort-diff`
+- `isort`: Sorts imports in Python files using isort. Usage: `make isort`
+
+
+
+
