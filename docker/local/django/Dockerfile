@@ -12,6 +12,7 @@ LABEL decription="Development image for Real Estate Project"
 ENV PYTHONDONTWRITEBYTECODE 1
 
 ENV PYTHONUNBUFFERED 1
+ENV DJANGO_SETTINGS_MODULE=real_estate.settings.development
 
 RUN apt-get update \
   && apt-get install -y build-essential \
