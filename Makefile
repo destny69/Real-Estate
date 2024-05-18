@@ -18,7 +18,7 @@ show-logs:
 	docker compose logs
 
 migrate:
-	docker compose exec api python3 manage.py migrate
+	docker compose exec api python3 manage.py migrate enquiries
 
 makemigrations:
 	docker compose exec api python3 manage.py makemigrations
@@ -36,7 +36,7 @@ volume:
 	docker volume inspect estate-src_postgres_data
 
 estate-db:
-	docker compose exec postgres-db psql --username=admin --dbname=estate
+	docker compose exec postgres-db psql --username=postgres --dbname=real_estate
 
 test:
 	docker compose exec api pytest -p no:warnings --cov=.
