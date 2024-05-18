@@ -1,8 +1,8 @@
-from .base import *
-
-
 import os
+
 from dotenv import load_dotenv
+
+from .base import *
 
 # Load environment variables from .env file
 load_dotenv()
