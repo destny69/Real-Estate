@@ -56,35 +56,6 @@ RUN chmod +x /start
 ENTRYPOINT [ "/entrypoint"]
 ```
 
-## Getting Started
-
-### Prerequisites
-
-Ensure you have Docker installed on your system. You can download it from [here](https://www.docker.com/products/docker-desktop).
-
-### Build the Docker Image
-
-Clone the repository and navigate to the project directory:
-
-```bash
-git clone https://github.com/yourusername/real-estate-project.git
-cd real-estate-project
-```
-
-Build the Docker image:
-
-```bash
-docker build -t real-estate-project:dev .
-```
-
-### Run the Docker Container
-
-To run the container, use the following command:
-
-```bash
-docker run --rm -it -v $(pwd):/app -p 8000:8000 real-estate-project:dev /start
-```
-
 ### Entry Point Script
 
 The `entrypoint` script is responsible for setting up the environment each time the container starts. Ensure that the script is executable and has Unix-style line endings.
@@ -103,9 +74,31 @@ The `start` script is used to run the Django development server. Like the `entry
 - **USER**: Manjil Gautam [Destiny]
 
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
+# DOCKER-COMPOSE DOCUMENTATION 
 
-This `README.md` provides an overview of the Docker setup, instructions for building and running the Docker container, and additional information about environment variables and scripts. Adjust the content as necessary to fit the specific details and structure of your project.
+# Docker Compose Configuration for Real Estate Project
+
+This document provides an overview and usage instructions for the Docker Compose configuration used in the Real Estate Project.
+
+## Overview
+
+The Docker Compose file defines services and their configurations for orchestrating the Real Estate Project environment. It sets up two services: `api` and `postgres-db`, facilitating the development and database requirements.
+
+### Services
+
+- **api**: Service for running the Real Estate Project API.
+- **postgres-db**: PostgreSQL database service for storing project data.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have Docker and Docker Compose installed on your system. You can download Docker Desktop, which includes Docker Compose, from [here](https://www.docker.com/products/docker-desktop).
+
+### Configuration
+
+The Docker Compose configuration includes the following sections:
+
+```yaml
+# Paste your docker-compose.yml content here
