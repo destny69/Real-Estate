@@ -100,8 +100,8 @@ The `start` script is used to run the Django development server. Like the `entry
 
 ## Maintainer
 
-- **Email**: api.imperfect@gmail.com
-- **YouTube**: [API Imperfect](https://www.youtube.com/c/APIImperfect)
+- **USER**: Manjil Gautam [Destiny]
+
 
 ## License
 
