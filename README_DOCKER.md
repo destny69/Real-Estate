@@ -213,3 +213,26 @@ extend-exclude = '''
     | env
 )/
 '''
+
+
+
+
+## for conflicting error
+2. Stop the Conflicting Process
+If you find that another instance of PostgreSQL or another application is using the port, you can stop it. For example, if another PostgreSQL service is running, you can stop it using:
+
+On Linux:
+
+bash
+Copy code
+sudo systemctl stop postgresql
+On macOS (if using Homebrew):
+
+bash
+Copy code
+brew services stop postgresql
+On Windows:
+
+powershell
+Copy code
+Stop-Service -Name "postgresql-x64-13"  # Replace with the correct service name
