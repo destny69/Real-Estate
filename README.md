@@ -5,6 +5,12 @@ A Real estate web application based on advance python
 auto addition og gitigonere file in python
 ----> npx gitignore python  
 
+
+
+clearing database port in ubuntu
+-----> sudo lsof -i :5432
+------> sudo service postgresql stop
+
 -----------------------------------------------------------------
 <h3> Some Good Practices for Developement Django web-app </h3>
 <h4> For Settings.py </h4>
