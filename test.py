@@ -10,7 +10,7 @@ def find_majority_element(num_list):
         # check the number of occurrence of each element
         count = num_list.count(num)
         n = len(num_list)
-
+        print(n)
         # if the number of occurrences is greater than
         # n // 2, where n is the length of the list
         # len(num_list) returns the length of the list
