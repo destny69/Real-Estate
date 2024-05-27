@@ -32,6 +32,6 @@ DATABASES = {
 }
 
 
-CELERY_broker_url = os.getenv("CELERY_BROKER")
-result_backend = os.getenv("CELERY_BACKEND")
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER")
+CELERY_RESULT_BACKEND = os.getenv("CELERY_BACKEND")
 timezone = "Asia/Kathmandu"
