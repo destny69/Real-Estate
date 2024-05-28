@@ -14,4 +14,7 @@ RUN npm install
 
 COPY . ${APP_HOME}
 
-CMD ["npm","start"]
+# Change ownership of the entire /app directory to the node user
+RUN chown -R node:node /app
+
+CMD ["npm", "start"]
