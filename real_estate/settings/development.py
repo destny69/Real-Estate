@@ -20,6 +20,11 @@ DOMAIN = "localhost:8000"
 SITE_NAME = "Real Estate"
 
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8080",
+    "http://127.0.0.1:8080",
+]
+
 DATABASES = {
     "default": {
         "ENGINE": env("POSTGRES_ENGINE"),
