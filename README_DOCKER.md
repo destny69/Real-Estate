@@ -1,5 +1,10 @@
+
+# note please go through cookiecutter django (cookiecutter.django.readthedocs.io/)
+
 # DOCKER DOCUMENTATION
 Here's a `README.md` file for the provided Dockerfile setup:
+
+
 
 ```markdown
 # Real Estate Project Development Docker Image
